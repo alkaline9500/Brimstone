@@ -4,10 +4,10 @@ TMPFILE=.tempfile.brim
 
 if [ -e $LOCKFILE ]
 then
-    echo "$1" >> $LOCKFILE
+    echo "$@" >> $LOCKFILE
 else
     touch $LOCKFILE
-    JOB="$1"
+    JOB="$@"
     while [ ! -z "$JOB" ]
     do
         eval "$JOB"

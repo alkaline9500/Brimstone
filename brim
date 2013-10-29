@@ -1,2 +1,2 @@
 #!/bin/bash
-nohup ./push.sh "$1" > brim.log &
+nohup ./push.sh "$@" > brim.log &
