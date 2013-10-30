@@ -4,7 +4,7 @@ TMPFILE=.tempfile.brim
 
 if [ -e $LOCKFILE ]
 then
-    echo "$@" >> $LOCKFILE
+    echo "$1" >> $LOCKFILE
 else
     touch $LOCKFILE
     JOB="$1"
