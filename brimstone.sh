@@ -19,4 +19,5 @@ else
         $HANDBRAKE_CLI -i $SRC/$FILE -o $DEST/$filename.$DEST_EXT $FLAGS
     done
     rm $LOCKFILE
+    /home/alkaline/bin/sendsms "Brimstone finished converting"
 fi
