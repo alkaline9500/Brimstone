@@ -18,4 +18,5 @@ else
         mv "$TMPFILE" "$LOCKFILE"
     done
     rm $LOCKFILE
+    /home/alkaline/Programming/Bark/mailman.py "Finished converting queue"
 fi
