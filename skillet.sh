@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOCKFILE=.lockfile.skil
+LOCKFILE=~/.lockfile.skil
 RAWFILE=raw3gg
 COOKEDFILE=cooked3gg
 DEST_EXT=iPad.mp4
@@ -25,6 +25,7 @@ else
         filename=`echo "$FILE" | sed "s/$RAWFILE/$COOKEDFILE/"`.$DEST_EXT
         echo "Converting $FILE to $filename..."
         $HANDBRAKE_CLI -i $FILE -o $filename $FLAGS
+        echo "Skillet converted $FILE"
         rm $FILE
     done
     rm $LOCKFILE
